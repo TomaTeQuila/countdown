@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	
+	<main>
+		<div class="container-main">
+			<h1 class="pt-2 bg-gradient-to-r from-blue-600 to-indigo-200 text-transparent bg-clip-text drop-shadow-[0_2px_1px_rgba(255,255,255,0.12)]">MDB COMEBACK</h1>
+			<div class="container-header">
+				<h2><span class="font-semibold bg-gradient-to-r from-blue-600 to-indigo-400 text-transparent bg-clip-text">Cuenta regresiva</span>⏰</h2>
+			</div>
+			<div class="container-body">
+				<Card title="Dias" tiempo="dia" />
+				<Card title="Horas" tiempo="hora" />
+				<Card title="Minutos" tiempo="minutos" />
+				<Card title="Segundos" tiempo="segundos" />
+			</div>
+			<p id="demo"></p>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.container-header h2{
+		font-size: 3rem;
+		font-family: 'roboto', 'sans-serif';
+	}
+	main {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		/* justify-content: center; */
+		align-items: center;
+	}
+
+	h1 {
+		letter-spacing: 0.75rem;
+  background: -webkit-linear-gradient(45deg, #f4b942, #ef3737);
+  -webkit-background-clip: text; /* Doesn't work on IE*/
+     -moz-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+		text-shadow: -0.2vw -0.2vw 0 rgb(255, 255, 255);
+	}
+
+	.container-main {
+		padding-top: 12rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.container-body {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	main h1 {
+		font-size: 5.8rem;
+		font-family: "Roboto Mono", monospace;
+		font-weight: bolder;
+	}
+</style>
+
+<script>
+	// Set the date we're counting down to
+	var countDownDate = new Date("Oct 12, 2024 12:00:00").getTime();
+	
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+	
+	  // Get today's date and time
+	  var now = new Date().getTime();
+	
+	  // Find the distance between now and the count down date
+	  var distance = countDownDate - now;
+	
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	
+	  // Display the result in the element with id="demo"
+	//   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+	//   + minutes + "m " + seconds + "s ";
+
+	  document.getElementById("dia").innerHTML = days.toString();
+	  document.getElementById("hora").innerHTML = hours.toString();
+	  document.getElementById("minutos").innerHTML = minutes.toString();
+	  document.getElementById("segundos").innerHTML = seconds.toString();
+	
+	  // If the count down is finished, write some text
+	  if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("dia").innerHTML = "0d";
+      	document.getElementById("hora").innerHTML = "0h";
+      	document.getElementById("minutos").innerHTML = "0m";
+      	document.getElementById("segundos").innerHTML = "0s";
+	  }
+	}, 1000);
+</script>
