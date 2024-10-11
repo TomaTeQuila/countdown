@@ -2,12 +2,13 @@
 interface Props {
 	title: string;
 	tiempo: string;
+
 }
 
 const {title, tiempo } = Astro.props;
 ---
 
-<div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mx-1">
+<div class={`block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mx-1 lg:w-1/4`}>
 	
 	<p id={tiempo} class="font-normal text-gray-400 dark:text-gray-400"></p>
 	<h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{title}</h5>
