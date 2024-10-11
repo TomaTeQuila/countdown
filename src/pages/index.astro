@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import VideoCard from '../components/VideoCard.astro';
 ---
 
 <Layout title="	MDB Roleplay...">
@@ -19,6 +20,17 @@ import Card from '../components/Card.astro';
 			</div>
 			
 		</div>
+		<section id="galeria" class="section-galeria">
+			<div class="container-main mx-auto p-4">
+				<h1 class="pt-2 bg-gradient-to-r from-blue-600 to-indigo-200 text-transparent bg-clip-text drop-shadow-[0_2px_1px_rgba(255,255,255,0.12)] text-center">VIDEOS MDB</h1>
+				<div class="video-container">
+					<VideoCard title="Escapando De La Policía En MDB Crew Roleplay" logo="https://yt3.ggpht.com/ytc/AIdro_mhj5gdbzZmgEMsTHpequcVzTC1DJbdsfYdlK3SL5cR5Go=s88-c-k-c0x00ffffff-no-rj" link="https://www.youtube.com/embed/ZWuRX1Lp8oc?si=4QmwbzTmkgem28rf" channel='Kidd Gabo'/>
+					<VideoCard title="TEASER #2 | MDB CREW | ROLEPLAY LIFE 👾" logo="https://yt3.ggpht.com/aELNTUaDUusWTNz_20Hd3kJ-CVYk-WGRfe-52LZcGZAES1QIIv8VqfpS23cRYMGj3rBcU0Ij9f0=s88-c-k-c0x00ffffff-no-rj" link="https://www.youtube.com/embed/VbxhskTttZ4?si=TDLtgT32IvSnjT7W" channel='MDB Roleplay'/>
+					<VideoCard title="TEASER #1 | MDB CREW | ROLEPLAY LIFE 👾" logo="https://yt3.ggpht.com/aELNTUaDUusWTNz_20Hd3kJ-CVYk-WGRfe-52LZcGZAES1QIIv8VqfpS23cRYMGj3rBcU0Ij9f0=s88-c-k-c0x00ffffff-no-rj" link="https://www.youtube.com/embed/_4NbxYHPfsA?si=IaodHHSy4Gg9sd3h" channel='MDB Roleplay'/>
+					
+				</div>
+			</div>
+		</section>
 	</main>
 </Layout>
 
@@ -72,6 +84,23 @@ import Card from '../components/Card.astro';
 		font-family: "Roboto Mono", monospace;
 		font-weight: bolder;
 	}
+
+	.section-galeria {
+		background-color: #13151a;
+	}
+	.section-galeria h1 {
+		font-size: 2.25rem;
+	}
+
+	.video-container {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
 </style>
 
 <script>

@@ -1,0 +1,77 @@
+---
+interface Props {
+	title: string;
+	logo: string;
+    link: string;
+    channel: string;
+
+}
+
+const {title, logo, link, channel } = Astro.props;
+---
+
+<div class="block rounded-2xl">
+	<div class="video-preview">
+        <iframe class="" width="560" height="315" src={link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="video-desc">
+        <h1>{title}</h1>
+        <div class="yt-info">
+            <img src={logo} alt="">
+            <h2>{channel}</h2>
+        </div>
+    </div>
+</div>
+
+<style>
+p {
+	font-size: 2rem;
+	font-family: 'roboto', 'sans-serif';
+}	
+
+iframe {
+    border-radius: 1rem 1rem 0 0; 
+}
+
+.block { 
+    box-shadow: 0px 0px 5px rgb(133, 133, 133);
+}
+
+.video-desc {
+    background-color: #13151a;
+    padding: 0.25rem;
+    border-radius: 0 0 1rem 1rem;
+    margin: 0.5rem;
+}
+
+.yt-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.video-desc h1 {
+    color: white;
+    font-size: 1.55rem;
+    font-family: 'roboto', 'sans-serif';
+    font-weight: bolder;
+    
+}
+
+.video-desc img{
+    border-radius: 999px;
+    width: 8%;
+    margin-right: 0.25rem;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.496);
+}
+
+.video-desc h2 {
+    color: white;
+    font-size: 1.05rem;
+    font-family: 'roboto', 'sans-serif';
+    font-weight: 500;
+}
+
+</style>
