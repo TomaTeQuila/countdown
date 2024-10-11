@@ -1,0 +1,53 @@
+---
+interface Props {
+	logo: string;
+
+}
+
+const {logo } = Astro.props;
+---
+    <nav>
+        <div class="mdb-logo">
+            <img src={logo} alt="logo" />
+        </div>
+        <div class="links">
+            <a href="#">Inicio</a>
+            <a href="#">MDB</a>
+            <a href="#">Galeria</a>
+        </div>
+    </nav>
+
+
+<style>
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #13151a;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.links {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex; 
+    gap: 2rem; 
+    margin-right: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+}
+
+.links a:hover{
+    text-shadow: 0.15rem 0.05rem rgba(192, 93, 93, 0.5);
+}
+
+.mdb-logo img {
+   width: 20%;
+   -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(-1px 1px 1px rgba(21, 84, 132, 0.423));
+}
+
+</style>
