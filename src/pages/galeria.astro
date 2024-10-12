@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GaleryCard from '../components/GaleryCard.astro';
+import VideoCard from '../components/VideoCard.astro';
+---
+
+<Layout title="Galeria">
+    <main>
+        <h1 class="pt-2 bg-gradient-to-r from-blue-600 to-indigo-400 text-transparent bg-clip-text drop-shadow-[0_2px_1px_rgba(255,255,255,0.12)] text-center title">GALERÍA</h1>
+        <div class="grid-container">
+            <GaleryCard title="MDB Roleplay" author="pokiZ - 04/07/2024" link="https://media.discordapp.net/attachments/1031376790742122566/1258582364775383070/image.png?ex=670b162b&is=6709c4ab&hm=3dc49065092453c3ee1f769fa7fa70bc323a55a62ab3f1000ad54eb6b1315a27&=&format=webp&quality=lossless&width=516&height=413"/>
+            <GaleryCard title="MDB Roleplay" author="Sr. Naranja - 03/07/2024" link="https://media.discordapp.net/attachments/1031376790742122566/1258203622924091493/image.png?ex=670b06ef&is=6709b56f&hm=d629d55ade2ba838adad572759050fe4692da0859ed5230626664dc5e88bf883&=&format=webp&quality=lossless&width=687&height=386"/>
+            <GaleryCard title="MDB Roleplay" author="Petrunkovic - 01/07/2024" link="https://media.discordapp.net/attachments/1031376790742122566/1257462437808967841/Captura_de_pantalla_29.png?ex=670af7a7&is=6709a627&hm=214b5fb66ca0b2577a9dd9faa35c8b813902890c954623163715e7223a6525a0&=&format=webp&quality=lossless&width=1193&height=671"/>
+            <GaleryCard title="MDB Roleplay" author="PASTEAO WECO" link="https://cdn.discordapp.com/attachments/1031376790742122566/1257031593294299270/image.png?ex=670b60a6&is=670a0f26&hm=8ac31a0661d3c9b654e7fe3037a92757ca25405df69c37118740e1ee605aafc4&"/>
+            <GaleryCard title="MDB Roleplay" author="Lukitaaa - 27/06/2024" link="https://media.discordapp.net/attachments/1031376790742122566/1256066497009156146/image.png?ex=670b2995&is=6709d815&hm=8ca487f7934559f4f66745262a238bae7025d9b311f1ea8dfa8c037390621259&=&format=webp&quality=lossless&width=687&height=386"/>
+            <GaleryCard title="MDB Roleplay" author="bardxro - 24/06/2024" link="https://media.discordapp.net/attachments/1031376790742122566/1254837603325317160/image.png?ex=670b4e56&is=6709fcd6&hm=d29f4217369ae28f6cabf187a503266ed9c352a888d1bbac182e26f5f4338e47&=&format=webp&quality=lossless&width=1193&height=671"/>
+            <GaleryCard title="MDB Roleplay" author="bardxro - 24/06/2024" link="https://media.discordapp.net/attachments/1031376790742122566/1254832240362393680/image.png?ex=670b4957&is=6709f7d7&hm=ffa1e0c0faf56be935037f65d3f616f8edc2ddc219d08c5bf75017e6f0246ab9&=&format=webp&quality=lossless&width=1193&height=671"/>
+            <GaleryCard title="MDB Roleplay" author="waaaaaaa - 23/06/2024 (corte reklo)" link="https://media.discordapp.net/attachments/1031376790742122566/1254526209048580137/image.png?ex=670ad514&is=67098394&hm=4e52a8aa587c2e85bfdb8b36d4d7670a4f1a092886372fe25081bacab3c6e394&=&format=webp&quality=lossless&width=462&height=437"/>
+        </div>
+    </main>
+</Layout>
+
+<style>
+
+    main
+    {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container {
+        display: grid;
+        margin: 0rem 10rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        grid-auto-flow: dense;
+        margin-bottom: 120px;
+    }
+
+    .title {
+		padding: 0px 0px 3rem 0px;
+        font-size: 5rem;
+        font-weight: bolder;
+		letter-spacing: 0.75rem;
+		background: -webkit-linear-gradient(45deg, #4e0e28, #ef3737);
+		-webkit-background-clip: text; /* Doesn't work on IE*/
+			-moz-background-clip: text;
+				background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-shadow: -0.2vw -0.2vw 0px rgb(255, 255, 255);
+	}
+</style>

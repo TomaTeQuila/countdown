@@ -1,0 +1,65 @@
+---
+interface Props {
+	title: string;
+	author: string;
+    link: string;
+
+}
+
+const {title, author, link } = Astro.props;
+---
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-body">
+                <div class="card-img">
+                    <img src={link} alt="">
+                </div>
+                <div class="card-img-desc">
+                    <p>{author}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <style>
+    img {
+        border-radius: 0rem 0rem 0rem 0rem;
+        max-height: 220px;
+    }
+</style> -->
+
+
+<style>
+    img {
+        width: 100%;
+        height: 420px; /* Altura fija para evitar variación en la altura */
+        max-height: 420px;
+        object-fit: cover;
+        /* Se asegura que la imagen no se deforme */
+        border-radius: 8px 8px 0 0;
+    }
+
+    .card {
+        max-width: 820px;
+        
+        border-radius: 1rem 1rem 1rem 1rem;
+        box-shadow: 0px 0px 2px rgb(133, 133, 133);
+    }
+
+    .card-img-desc {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        background-color: #ffffff0c;
+        padding: 0.25rem;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .card-img-desc p {
+        color: #ffffff;
+        padding: 0.25rem;
+    } 
+
+</style>
