@@ -35,6 +35,7 @@ import VideoCard from '../components/VideoCard.astro';
 </Layout>
 
 <style>
+
 	.container-header h2{
 		font-size: 3rem;
 		font-family: 'roboto', 'sans-serif';
@@ -87,18 +88,13 @@ import VideoCard from '../components/VideoCard.astro';
 		align-items: center;
 	}
 
-	@media screen and (max-width: 425px) {
-		.container-body {
-			flex-direction: column;
-		}
-	}
-
+	
 	main h1 {
 		font-size: 5.8rem;
 		font-family: "Roboto Mono", monospace;
 		font-weight: bolder;
 	}
-
+	
 	.section-galeria {
 		padding-top: 3rem;
 		background-color: #13151a;
@@ -106,7 +102,7 @@ import VideoCard from '../components/VideoCard.astro';
 	.section-galeria h1 {
 		font-size: 2.75rem;
 	}
-
+	
 	.video-container {
 		display: flex;
 		flex-direction: row;
@@ -116,6 +112,40 @@ import VideoCard from '../components/VideoCard.astro';
 		align-items: center;
 	}
 
+	.video-container iframe {
+		width: 100%; /* Los iframes ocupan el 100% del contenedor */
+		max-width: 480px; /* Máximo ancho en pantallas grandes */
+		height: auto;
+		aspect-ratio: 16 / 9; /* Mantiene la proporción 16:9 */
+	}
+	
+	@media screen and (max-width: 768px) {
+		.video-container iframe {
+			max-width: 100%; /* En pantallas pequeñas, ocupa todo el ancho disponible */
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+		.container-body {
+			flex-direction: column;
+		}
+
+		html {
+			width: 100vh;
+		}
+
+		.video-container {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.video-container iframe {
+			max-width: 100%; /* Evita que los videos sean demasiado pequeños */
+		}
+	}
 </style>
 
 <script>
