@@ -39,16 +39,33 @@ import VideoCard from '../components/VideoCard.astro';
         margin-bottom: 120px;
     }
 
+    @media (max-width: 1400px) {
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (max-width: 1068px) {
+        .grid-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    
     .title {
-		padding: 0px 0px 3rem 0px;
+        padding: 0px 0px 3rem 0px;
         font-size: 5rem;
         font-weight: bolder;
 		letter-spacing: 0.75rem;
 		background: -webkit-linear-gradient(45deg, #4e0e28, #ef3737);
 		-webkit-background-clip: text; /* Doesn't work on IE*/
-			-moz-background-clip: text;
-				background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
 		-webkit-text-fill-color: transparent;
 		text-shadow: -0.2vw -0.2vw 0px rgb(255, 255, 255);
 	}
+    @media (max-width: 420px) {
+        .title {
+            font-size: 3rem;
+        }
+    }
 </style>
