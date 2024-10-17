@@ -18,6 +18,7 @@ import VideoCard from '../components/VideoCard.astro';
 				<Card title="Minutos" tiempo="minutos" />
 				<Card title="Segundos" tiempo="segundos" />
 			</div>
+			<p>¡Servidor Abierto! 🟢</p>
 			
 		</div>
 		<section id="galeria" class="section-galeria">
@@ -49,7 +50,7 @@ import VideoCard from '../components/VideoCard.astro';
 	}
 
 	h1 {
-		padding: 0px 0px 3rem 0px;
+		padding: 0px 0px 1.25rem 0px;
 		letter-spacing: 0.75rem;
 		background: -webkit-linear-gradient(45deg, #151775, #3762ef);
 		-webkit-background-clip: text; /* Doesn't work on IE*/
@@ -73,6 +74,12 @@ import VideoCard from '../components/VideoCard.astro';
 		padding: 0px 0px 1.25rem 0px;
 	}
 
+	.container-main p {
+		padding-top: 1rem;
+		color: aliceblue;
+		font-size: 2.25rem;
+		font-weight: 500;
+	}
 	.container-main {
 		padding-top: 8rem;
 		display: flex;
@@ -96,7 +103,7 @@ import VideoCard from '../components/VideoCard.astro';
 	}
 	
 	.section-galeria {
-		padding-top: 3rem;
+		padding-top: 1rem;
 		background-color: #13151a;
 	}
 	.section-galeria h1 {

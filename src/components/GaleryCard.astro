@@ -1,22 +1,22 @@
 ---
 interface Props {
 	title: string;
-	author: string;
-    link: string;
+	url: string;
+    descripcion: string;
 
 }
 
-const {title, author, link } = Astro.props;
+const {title, url, descripcion } = Astro.props;
 ---
 <div class="container">
     <div class="card">
         <div class="card-header">
             <div class="card-body">
                 <div class="card-img">
-                    <img src={link} alt="">
+                    <img src={url} alt="">
                 </div>
                 <div class="card-img-desc">
-                    <p>{author}</p>
+                    <p>{descripcion}</p>
                 </div>
             </div>
         </div>
